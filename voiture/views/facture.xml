@@ -1,0 +1,31 @@
+<odoo>
+	<data>
+		<record id="facture_form_view" model="ir.ui.view" >
+			<field name="name">Facture Form</field>
+		    <field name="model">facture</field>
+		    <field name="arch" type="xml">
+		    	<form>
+		    		<sheet>
+		    			<group>
+		    				<field name = "id_facture"/>
+		    				<field name = "description"/>
+		    				<separator string="Client"/>
+		    				<field name ="personne_id"/>
+		    			</group>
+		    		</sheet>
+		    	</form>
+		    </field>
+		</record>
+		<record id="facture_tree_view" model="ir.ui.view" >
+			<field name="name">Facture List</field>
+		    <field name="model">facture</field>
+		    <field name="arch" type="xml">
+				<tree>
+					<field name = "id_facture"/>
+		    		<field name = "description"/>
+		    		<field name ="personne_id"/>
+		    	</tree>
+		    </field>
+		</record>
+	</data>
+</odoo>

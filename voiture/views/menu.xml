@@ -1,0 +1,36 @@
+<odoo>
+	<record model="ir.actions.act_window" id="voiture_action_window">
+		<field name="name">Voiture</field>
+        <field name="res_model">voiture</field>
+      	<field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="location_action_window">
+    	<field name="name">Location</field>
+    	<field name="res_model">location</field>
+    	<field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="personne_action_window">
+        <field name="name">Personne</field>
+        <field name="res_model">personne</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="facture_action_window">
+        <field name="name">Facture</field>
+        <field name="res_model">facture</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    
+
+    <menuitem name="Agence Voiture" id="voiture.menu_root"/>
+    <menuitem name="Location" id="location_voiture_liste" parent="voiture.menu_root"
+    	action="location_action_window"/>
+    <menuitem name="Liste des voiture" id="liste_voiture" parent="voiture.menu_root"
+        action="voiture_action_window"/>
+   <menuitem name="Clients" id="liste_client" parent="voiture.menu_root"
+        action="personne_action_window"/>
+    <menuitem name="Facture" id="création_facture" parent="voiture.menu_root"
+        action="facture_action_window"/>
+
+</odoo>

@@ -1,0 +1,48 @@
+<odoo>
+	<data>
+		<record id="location_form_view" model="ir.ui.view" >
+			<field name="name">Location Form</field>
+		    <field name="model">location</field>
+		    <field name="arch" type="xml">
+		     	<form>
+                    <header>
+                        <button string = "Duree" type ="object" name = "duree_location"/>
+                        <!--<button string = "CHECKd" type ="object" name = "check_date"/>-->
+                    </header>-->
+		     		<sheet>
+		     			<group name = "group top">
+    		     			<field name = "id_location"/>
+                            <field name = "prix_voiture_jour" />
+                            <field name = "prix_total"/>
+                            <field name = "currency_id"/>
+                            <field name = "duree_location"/>
+                            <field name = "date_location" />
+                            <field name = "date_retour"/>
+                            <separator string="Voiture"/>
+                            <field name = "voiture_id" />
+                            <separator string="Client"/>
+                            <field name = "personne_id"/>
+                            <field name ="facture_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="location_tree_view" model="ir.ui.view" >
+        	<field name="name">Location List</field>
+        	<field name="model">location</field>
+		    <field name="arch" type="xml">
+		    	<tree>
+		    		<field name = "id_location"/>
+                    <field name = "date_location" />
+                    <field name = "prix_voiture_jour" />
+                    <!--<field name = "prix_total"/>-->
+                    <field name = "voiture_id" />
+                    <field name = "personne_id"/>
+                    <field name ="facture_id"/>
+                </tree>
+            </field>
+        </record>
+
+	</data>
+</odoo>

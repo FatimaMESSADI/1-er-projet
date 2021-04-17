@@ -1,0 +1,35 @@
+<odoo>
+	<data>
+		<record id="personne_form_view" model="ir.ui.view" >
+			<field name="name">Personne Form</field>
+		    <field name="model">personne</field>
+		    <field name="arch" type="xml">
+		    	<form>
+		    		<sheet>
+		    			<group>
+		    				<field name = "identifiant"/>
+		    				<field name = "nom"/>
+				            <field name = "prénom" />
+				            <field name = "Date_naissance"/>
+				            <field name = "num_carte_identité" />
+				        </group>
+				    </sheet>
+				</form>
+			</field>
+		</record>
+		<record id="personne_tree_view" model="ir.ui.view" >
+			<field name="name">Personne List</field>
+            <field name="model">personne</field>
+            <field name="arch" type="xml">
+            	<tree>
+            		<field name = "identifiant"/>
+            		<field name = "nom" readonly="1"/>
+				    <field name = "prénom" />
+				    <field name = "Date_naissance"/>
+				    <field name = "num_carte_identité" />
+				</tree>
+			</field>
+		</record>
+
+	</data>
+</odoo>

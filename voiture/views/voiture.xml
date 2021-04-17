@@ -1,0 +1,57 @@
+<odoo>
+  <data>
+    <record id="voiture_form_view" model="ir.ui.view" >
+      <field name="name">Voiture Form</field>
+      <field name="model">voiture</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+            <button string = "CHECK" type ="object" name = "is_dispo"/>
+          </header>
+          <sheet>
+            <group>
+              <field name = "modèle"/>
+              <field name = "série" />
+              <field name = "matricule"/>
+              <field name = "dis"/>
+              <field name = "image" widget="image"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="voiture_tree_view" model="ir.ui.view">
+      <field name="name">Voiture List</field>
+      <field name="model">voiture</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name = "modèle"/>
+          <field name = "série" />
+          <field name = "matricule"/>
+          <field name = "dis"/>
+          <field name = "image"/>
+        </tree>
+      </field>
+    </record>
+   
+    
+
+    <!-- Top menu item -->
+    
+   
+    
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="voiture.menu_1" parent="voiture.menu_root"/>
+    <menuitem name="Menu 2" id="voiture.menu_2" parent="voiture.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="voiture.menu_1_list" parent="voiture.menu_1"
+              action="voiture.action_window"/>
+    <menuitem name="Server to list" id="voiture" parent="voiture.menu_2"
+              action="voiture.action_server"/>
+    -->
+  </data>
+</odoo>
